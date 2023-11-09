@@ -1,0 +1,227 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Jost', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+/* body{
+    height: 3000px;
+} */
+/* ==================== HEADER ==================== */
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+    backdrop-filter: blur(80px);
+}
+.logo img{
+    max-width: 120px;
+    height: auto;
+}
+.navmenu{
+    display: flex;
+}
+.navmenu a{
+    color: #2c2c2c;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.navmenu a:hover{
+    color: #EE1C47;
+}
+.nav-icon i{
+    margin-right: 20px;
+    color: #2c2c2c;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.nav-icon i:hover{
+    transform: scale(1.1);
+    color: #EE1C47;
+}
+header .bx-menu {
+    display: none;
+}
+
+/* ==================== PRODUCTS ==================== */
+section{
+    padding: 6% 10%;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 2rem;
+}
+.row{
+    position: relative;
+    transition: all .40s;
+}
+.row img{
+    width: 100%;
+    height: auto;
+    transition: all .40s;
+    border-radius: 10px;
+}
+.row:hover{
+    transform: scale(0.97);
+}
+.products-text h5{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #27b737;
+    padding: 3px 10px;  
+    border-radius: 8px;
+}
+.heart-icon{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+.heart-icon:hover{
+    color: #EE1C47;
+}
+.ratting i{
+    color: #FF8C00;
+    font-size: 18px;
+}
+.price h4{
+    color: #111;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.price p{
+    color: #151515;
+    font-size: 14px;
+    font-weight: 600;
+}
+.row .btn {
+    background-color: #EE1C47;
+    color: #F3F4F6;
+    padding: 12px 0;
+    margin-top: 8px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+}
+.row .btn:hover {
+    background-color: #ca153a;
+}
+
+/* ==================== FOOTER ==================== */
+.contact{
+    background-color: #F3F4F6;
+}
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    gap: 3rem;
+}
+.first-info img{
+    width: 140px;
+    height: auto;
+}
+.contact-info h4{
+    color: #212529;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.contact-info p{
+    color: #565656;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .42s;
+}
+.contact-info p:hover{
+    color: #EE1C47;
+}
+.social-icon i{
+    color: #565656;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: all .42s;
+}
+.social-icon i:hover{
+    transform: scale(1.3);
+}
+.end-text{
+    background-color: #edfff1;
+    text-align: center;
+    padding: 20px;
+}
+.end-text p{
+    color: #111;
+    text-transform: capitalize;
+}
+
+
+
+/* ==================== TABLET ==================== */
+@media (max-width: 769px){
+    /* ==================== NAVBAR ==================== */
+    header {
+        padding: 15px 6%;
+        background-color: #fff;
+    }
+    header .navmenu {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 100%;
+        height: fit-content;
+        transition: 0.4s;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 1.5rem 0;
+        border-bottom: 2px solid #999;
+    }
+    header .navmenu.active {
+        right: 0;
+    }
+    header .navmenu ul li {
+        margin: 0;
+    }
+    header .navmenu ul li a {
+        padding: 1.3rem 0;
+        text-align: center;
+        display: block;
+    }
+    .nav-icon i {
+        margin-right: 12px;
+    }
+    header .bx-menu {
+        display: block;
+        font-size: 2rem;
+    }
+
+    /* ==================== PRODUCT ==================== */
+    section {
+        padding: 5% 6%;
+    }
+}
